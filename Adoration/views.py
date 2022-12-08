@@ -9,30 +9,42 @@ from django.core.mail import send_mail
 
 def Main(request):
     if request.method == 'POST':
-        f_name = request.POST['f_name']
-        l_name = request.POST['l_name']
-        name = f_name + " " + l_name
-        email = request.POST['email']
-        message = request.POST['message']
-        phone = request.POST['phone']
-        contact = Contact(name=name,email=email,message=message,phone=phone)
-        contact.save()
-        print(contact)
-        Message_to_send = f'Hello {f_name},\n\nThank you for contacting us. We will get back to you as soon as possible. Be sure you provided the proper information.\n\nName: {name}\nPhone: {phone}\nEmail: {email}\n\nRegards,\nAdoration Team'
-        send_mail(
-            "Adoration Holidays",
-            Message_to_send, #Message to send
-            'info@adorationholidays.com',# from email
-            [email,], # to email
-            fail_silently=False,
-        )
-        contact.recieved_email = True
-        print("recireved email")
-        print(contact)
-        print(contact.recieved_email)
-        contact.save()
-        print("saved")
-        return render(request,'index.html',{'message':'Message Sent Successfully'})
+        if request.POST.get('type') == 'Quote':
+            name = request.POST['name']
+            email = request.POST['email']
+            phone = request.POST['phone']
+            package = request.POST['package']
+            Message_to_send = f'Hello {name},\n\nThank you for contacting us. We will get back to you as soon as possible. Be sure you provided the proper information.\n\nName: {name}\nPhone: {phone}\nEmail: {email}\n\nRegards,\nAdoration Team'
+            customer = Customer(name=name,email=email,phone=phone,package=package)
+            customer.save()
+            send_mail(
+                "Adoration Holidays",
+                Message_to_send, #Message to send
+                'info@adorationholidays.com',# from email
+                [email,], # to email
+                fail_silently=False,
+            )
+            customer.recieved_email = True
+            customer.save()
+            return render(request,'index.html',{'message':'Message Sent Successfully'})
+        elif request.POST.get('type') == 'contact':
+            name = request.POST['name']
+            email = request.POST['email']
+            phone = request.POST['phone']
+            message = request.POST['message']
+            Message_to_send = f'Hello {name},\n\nThank you for contacting us. We will get back to you as soon as possible. Be sure you provided the proper information.\n\nName: {name}\nPhone: {phone}\nEmail: {email}\n\nRegards,\nAdoration Team'
+            contact = Contact(name=name,email=email,message=message,phone=phone)
+            contact.save()
+            send_mail(
+                "Adoration Holidays",
+                Message_to_send, #Message to send
+                'info@adorationholidays.com',# from email
+                [email,], # to email
+                fail_silently=False,
+            )
+            contact.recieved_email = True
+            contact.save()
+            return render(request,'index.html',{'message':'Message Sent Successfully'})
 
     tests = Testimonial.objects.all()
     extras = {"tests":tests}
