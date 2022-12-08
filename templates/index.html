@@ -467,29 +467,31 @@
     <div class="container">
       <div class="row ml-1">
         <div class="col-lg-6 mb-5 mb-lg-0">
-          <form class="contact-form" data-aos="fade-up" data-aos-delay="200">
+          <form class="contact-form" data-aos="fade-up" data-aos-delay="200" method="POST">
+            {% csrf_token %}
+            <input type="hidden" name="type" value="contact">  {# this line is for backend Code  #}
             <div class="row">
               <div class="col-6">
                 <div class="form-group">
-                  <label class="text-black" for="name-contact">Name</label>
-                  <input type="text" class="form-control" id="name-contact">
+                  <label class="text-black" for="name">Name</label>
+                  <input type="text" class="form-control" id="name" name="name">
                 </div>
               </div>
               <div class="col-6">
                 <div class="form-group">
-                  <label class="text-black" for="email-contact">Email address</label>
-                  <input type="email" class="form-control" id="email-contact">
+                  <label class="text-black" for="email">Email address</label>
+                  <input type="email" class="form-control" id="email" name='email'>
                 </div>
               </div>
             </div>
             <div class="form-group">
-              <label for="text-black" for="number-contact">Phone Number</label>
-              <input type="tel" name="phone" id="number-contact" class="form-control">
+              <label for="text-black" for="number">Phone Number</label>
+              <input type="tel" name="phone" id="number" class="form-control">
             </div>
 
             <div class="form-group">
               <label class="text-black" for="message">Message</label>
-              <textarea name="" class="form-control" id="message" cols="30" rows="5"></textarea>
+              <textarea name="message" class="form-control" id="message" cols="30" rows="5"></textarea>
             </div>
 
             <button type="submit" class="btn btn-primary">Send Message</button>
