@@ -389,7 +389,7 @@
   <!-- special offers and discount end here  -->
 
 
-  <!-- form modal starts here -->
+<!-- form modal starts here -->
 
   <div id="ModalLoginForm" class="modal fade">
     <div class="modal-dialog" role="document">
@@ -401,6 +401,7 @@
           <form role="form" method="POST" action="">
             {% csrf_token %}
             <input type="hidden" name="_token" value="">
+            <input type="hidden" name="type" value="Quote">  {# this line is for backend Code  #}
             <div class="form-group">
               <label class="control-label" for="name">Name</label>
               <div>
@@ -416,13 +417,13 @@
             <div class="form-group">
               <label class="control-label" for="num">Phone</label>
               <div>
-                <input type="tel" class="form-control input-lg" name="num" placeholder="+91 8888888888" pattern="[0-9]{10}" required id="num">
+                <input type="tel" class="form-control input-lg" name="phone" placeholder="+91 8888888888" pattern="[0-9]{10}" required id="num">
               </div>
             </div>
             <div class="form-group">
               <label class="control-label" for="offer-selected">Offer You Chose</label>
               <div>
-                <select name="offer-selected" class="form-control" id="offer-selected" required>
+                <select name="package" class="form-control" id="offer-selected" required>
                   <option value="Select Option" disabled selected>Select Option</option>
                   <option value="Marvelous Kashmir (5N/6D)">Marvelous Kashmir (5N/6D)</option>
                   <option value="Trip to Paradise (6N/7D)">Trip to Paradise (6N/7D)</option>
@@ -443,6 +444,7 @@
       </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
   </div><!-- /.modal -->
+
 
   <!-- form modal ends here  -->
 
