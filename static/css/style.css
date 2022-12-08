@@ -4,7 +4,45 @@ a,a:hover{color:#2f4c2d}#overlayer,body:before{top:0;position:fixed;left:0}#map 
     src: url("/fonts/Inter-Regular.ttf");
     font-display: swap;
 }
-.nav-top{
-    background:rgba(47, 76, 45,0.7);
-    backdrop-filter: blur(10px);
+.nav-top{padding:10px; background:rgba(0,0,0,0.5); color:#fff;}
+.color-primary{
+    color:#fff !important;
+}
+@media screen and (max-width: 768px) {
+    .nav-top{padding:20px 0 !important; color:#2f4c2d;}
+    .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl{
+        padding:0;
+    }
+    .burger{
+        margin-right: 30px !important;
+    }
+    .color-primary{
+        color:#2f4c2d !important;
+    }
+    .logo{
+        margin-left: 20px !important;
+        color:#fff !important;
+    }
+    .row{
+        margin-right: 0 !important;
+    }
+}
+
+.sidebar{
+    position: fixed;
+    left:0;
+    top:30%;
+    z-index:300000;
+}
+.animate-text{
+    animation:animate 1s linear infinite;
+}
+@keyframes animate{
+    
+    from{
+        opacity:1;
+    }
+    to{
+        opacity:.5;
+    }
 }
