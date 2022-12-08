@@ -72,15 +72,20 @@
                     <li>Item 4</li>
                     <li>Item 5</li>
                     <li>Item 6</li>
-                </ul>
+                </ul> 
                 <span class="fw-bold">₹40,000 (Per Person)</span>
               </p>
-              <button class="btn btn-default btn-success px-4 fw-bold">GET QUOTE</button>
+              <button class="btn btn-default btn-success px-4 fw-bold"  data-toggle="modal" data-target="#ModalLoginForm">GET QUOTE</button>
             </div>
           </div>
         </div>
       </div>
+
       <div class="accordion mt-5" id="accordionPanelsStayOpenExample">
+
+
+        <!-- individual accordian starts here  -->
+
         <div class="accordion-item border-0 my-3">
           <h2 class="accordion-header" id="panelsStayOpen-headingOne">
             <button
@@ -118,6 +123,11 @@
             </div>
           </div>
         </div>
+
+        <!-- individual accordian ends here  -->
+
+        <!-- individual accordian starts here  -->
+
         <div class="accordion-item border-0 my-3">
           <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
             <button
@@ -155,6 +165,11 @@
             </div>
           </div>
         </div>
+
+        <!-- individual accordian ends here  -->
+
+        <!-- individual accordian starts here  -->
+
         <div class="accordion-item border-0 my-3">
           <h2 class="accordion-header" id="panelsStayOpen-headingThree">
             <button
@@ -191,9 +206,69 @@
               </p>
             </div>
           </div>
+
+        <!-- individual accordian ends here  -->
+        
         </div>
       </div>
     </div>
+
+
+<!-- form modal starts here  -->
+    
+  <div id="ModalLoginForm" class="modal fade">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title">Get a Quote</h1>
+        </div>
+        <div class="modal-body">
+          <form role="form" method="POST" action="">
+            <input type="hidden" name="_token" value="">
+            <div class="form-group">
+              <label class="control-label" for="name">Name</label>
+              <div>
+                <input type="text" class="form-control input-lg" name="name" placeholder="Ritesh Sharma" required id="name">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label" for="email">Email</label>
+              <div>
+                <input type="email" class="form-control input-lg" name="email" placeholder="email@domain.com" required id="email">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label" for="num">Phone</label>
+              <div>
+                <input type="tel" class="form-control input-lg" name="num" placeholder="+91 8888888888" pattern="[0-9]{10}" required id="num">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label" for="offer-selected">Offer You Chose</label>
+              <div>
+                <select name="offer-selected" class="form-control" id="offer-selected" required>
+                  <option value="Select Option" disabled selected>Select Option</option>
+                  <option value="Marvelous Kashmir (5N/6D)">Marvelous Kashmir (5N/6D)</option>
+                  <option value="Trip to Paradise (6N/7D)">Trip to Paradise (6N/7D)</option>
+                  <option value="Straight to Heaven (7N/8D)">Straight to Heaven (7N/8D)</option>
+                  <option value="Straight to Heaven (7N/8D)">Wanderlust (Honeymoon Package) (5N/6D)</option>
+                </select>
+              </div>
+            </div>
+            <div class="modal-footer w-100">
+              <div class="form-group w-100">
+                <div>
+                  <button type="submit" class="btn btn-success w-100">Get a Quote</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+  <!-- form modal ends here  -->
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
