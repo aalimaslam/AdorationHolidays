@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+      integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    />
+    <style>
+        .btn-default {
+            border-radius: 23px;
+        }
+
+        .accordion-button.collapsed {
+            background: rgb(35, 124, 59);
+            color: white;
+        }
+
+        .accordion-button:not(.collapsed) {
+            background-color: rgb(1, 44, 12);
+        }
+        
+        .accordion-button:not(.collapsed)::after {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+        }
+        .accordion-button.collapsed::after {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+        }
+
+    </style>
+  </head>
+  <body>
+    <div class="container my-5">
+      <div class="card mb-3 border-0" style="max-width: 100%">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img
+              src="https://images.unsplash.com/photo-1587502536575-6dfba0a6e017?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"
+              class="img-fluid rounded mx-2"
+              alt="..." width="350em"
+            />
+          </div>
+          <div class="col-md-2"></div>
+          <div class="col-md-6">
+            <div class="card-body">
+              <h5 class="card-title fw-bold fs-3 text-success">Title</h5>
+              <p class="fw-bold">4N 5D</p>
+              <p class="card-text">
+                  <ul>
+                    <span class="fw-bold">INCLUSION</span>
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                    <li>Item 4</li>
+                    <li>Item 5</li>
+                    <li>Item 6</li>
+                </ul>
+                <span class="fw-bold">₹40,000 (Per Person)</span>
+              </p>
+              <button class="btn btn-default btn-success px-4 fw-bold">GET QUOTE</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion mt-5" id="accordionPanelsStayOpenExample">
+        <div class="accordion-item border-0 my-3">
+          <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+            <button
+              class="accordion-button fw-bold fs-4 text-light rounded"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseOne"
+              aria-expanded="true"
+              aria-controls="panelsStayOpen-collapseOne"
+            >
+              DAY 1 - HELLO THERE
+            </button>
+          </h2>
+          <div
+            id="panelsStayOpen-collapseOne"
+            class="accordion-collapse collapse show"
+            aria-labelledby="panelsStayOpen-headingOne"
+          >
+            <div class="accordion-body">
+              <p>What is Lorem Ipsum?</p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Distinctio facilis totam temporibus excepturi obcaecati
+                repellendus ipsum accusamus commodi molestias, minima
+                blanditiis! Commodi, fuga. Qui itaque vero reiciendis beatae
+                commodi quia. Ut optio, iure fuga fugiat in quae dolores fugit,
+                numquam consectetur, eius exercitationem! Consequatur iusto,
+                ducimus ad dolorem sit corporis placeat rerum! Quo veritatis
+                ipsam voluptas odio provident mollitia at? Voluptatibus culpa
+                sunt minima exercitationem, quam, id error illum fugit
+                aspernatur commodi quia dolores temporibus consequatur,
+                architecto nam possimus vitae odio ex sit similique laborum
+                facere voluptatem soluta! Molestias, iure.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item border-0 my-3">
+          <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+            <button
+              class="accordion-button fw-bold fs-4 text-light rounded"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseTwo"
+              aria-expanded="true"
+              aria-controls="panelsStayOpen-collapseTwo"
+            >
+              DAY 2 - HELLO THERE
+            </button>
+          </h2>
+          <div
+            id="panelsStayOpen-collapseTwo"
+            class="accordion-collapse collapse show"
+            aria-labelledby="panelsStayOpen-headingTwo"
+          >
+            <div class="accordion-body">
+              <p>What is Lorem Ipsum?</p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Distinctio facilis totam temporibus excepturi obcaecati
+                repellendus ipsum accusamus commodi molestias, minima
+                blanditiis! Commodi, fuga. Qui itaque vero reiciendis beatae
+                commodi quia. Ut optio, iure fuga fugiat in quae dolores fugit,
+                numquam consectetur, eius exercitationem! Consequatur iusto,
+                ducimus ad dolorem sit corporis placeat rerum! Quo veritatis
+                ipsam voluptas odio provident mollitia at? Voluptatibus culpa
+                sunt minima exercitationem, quam, id error illum fugit
+                aspernatur commodi quia dolores temporibus consequatur,
+                architecto nam possimus vitae odio ex sit similique laborum
+                facere voluptatem soluta! Molestias, iure.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item border-0 my-3">
+          <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+            <button
+              class="accordion-button fw-bold fs-4 text-light rounded"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseThree"
+              aria-expanded="true"
+              aria-controls="panelsStayOpen-collapseThree"
+            >
+              DAY 3 - HELLO THERE
+            </button>
+          </h2>
+          <div
+            id="panelsStayOpen-collapseThree"
+            class="accordion-collapse collapse show"
+            aria-labelledby="panelsStayOpen-headingThree"
+          >
+            <div class="accordion-body">
+              <p>What is Lorem Ipsum?</p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Distinctio facilis totam temporibus excepturi obcaecati
+                repellendus ipsum accusamus commodi molestias, minima
+                blanditiis! Commodi, fuga. Qui itaque vero reiciendis beatae
+                commodi quia. Ut optio, iure fuga fugiat in quae dolores fugit,
+                numquam consectetur, eius exercitationem! Consequatur iusto,
+                ducimus ad dolorem sit corporis placeat rerum! Quo veritatis
+                ipsam voluptas odio provident mollitia at? Voluptatibus culpa
+                sunt minima exercitationem, quam, id error illum fugit
+                aspernatur commodi quia dolores temporibus consequatur,
+                architecto nam possimus vitae odio ex sit similique laborum
+                facere voluptatem soluta! Molestias, iure.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
