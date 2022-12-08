@@ -24,3 +24,16 @@ class Contact(models.Model):
     Resolved = models.BooleanField(default=False)
     def __str__(self):
         return self.name
+    
+    
+
+class Customer(models.Model):
+    name = models.CharField(max_length=100)
+    email = models.EmailField(max_length=100)
+    phone = models.CharField(max_length=100)
+    package = models.CharField(max_length=100)
+    recieved_email = models.BooleanField(default=False)
+    Resolved = models.BooleanField(default=False)
+
+    def __str__(self):
+        return self.name
