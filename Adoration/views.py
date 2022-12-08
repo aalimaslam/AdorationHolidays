@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from Adoration.models import Testimonial, Contact
+from Adoration.models import Testimonial, Contact, Customer
 from django.core.mail import send_mail
 # Create your views here.
 
