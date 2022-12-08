@@ -1,0 +1,36 @@
+body{
+    background: #2f4c2d;
+}
+.text-underline{
+    text-decoration: underline;
+}
+img{
+    filter:drop-shadow(0 0 0.75rem #000);
+    animation: animate 4s infinite;
+}
+.hero{
+    min-height:70vh;
+}
+.h1{
+    font-size: 4rem !important;
+    padding:10px 30px;
+    background: white;
+    color: #2f4c2d;
+    border-radius: 20px;
+    display: inline-block;
+}
+@keyframes animate {
+    0%{
+        transform: translate(0,0);
+    }
+    50%{
+        transform:rotate(45deg) translate(10px,10px);
+    }
+    
+    75%{
+        transform:translate(-40px,-40px) scale(.8);
+    }
+    100%{
+        transform:translate(0,0);
+    }
+}
