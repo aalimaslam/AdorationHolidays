@@ -6,13 +6,14 @@ from django.contrib import admin
 from django.contrib.auth.models import Group
 # import user
 from django.contrib.auth.models import User
-from Adoration.models import Testimonial, Contact
+from Adoration.models import Testimonial, Contact, Customer
 # Register your models here.
 
 admin.site.unregister(Group)
 admin.site.unregister(User)
 admin.site.register(Testimonial)
 admin.site.register(Contact)
+admin.site.register(Customer)
 
 
 # change the admin site title
