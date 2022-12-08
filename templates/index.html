@@ -1,0 +1,587 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Aalim aslam">
+  <link rel="shortcut icon" href="{% static 'favicon.png' %}">
+
+  <meta name="description" content="The best Tour and Travel Company in the Kashmir Valley." />
+  <meta name="keywords" content="travel agency, tour and travels, adoration Holidays, the adoration holidays, best travel agency in srinagar, best travel agency,travel agency near me" />
+  <meta name="robots" content= "index, follow">
+
+  <meta property="og:title" content="Adoration Holidays" />
+  <meta property="og:description" content="The Best Travel agency in Jammu and Kashmir" />
+  <meta property="og:image" content="{% static 'images/logo.png' %}" />
+<!-- 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Source+Serif+Pro:wght@400;700&display=swap" rel="stylesheet"> -->
+
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/jquery.fancybox.min.css' %}">
+  <link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}">
+  <link rel="stylesheet" href="{% static 'fonts/flaticon/font/flaticon.css' %}">
+  <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+  <title>Adoration Holidays</title>
+</head>
+
+<body>
+
+
+  <div class="site-mobile-menu site-navbar-target">
+    <div class="site-mobile-menu-header">
+      <div class="site-mobile-menu-close">
+        <span class="icofont-close js-menu-toggle"></span>
+      </div>
+    </div>
+    <div class="site-mobile-menu-body"></div>
+  </div>
+
+  <nav class="site-nav nav-top">
+    <div class="container fixed-top">
+      <div class="site-navigation">
+        <a href="index.html" class="logo m-0">Adoration Holidays <span class="text-primary">.</span></a>
+
+        <ul class="js-clone-nav d-none d-lg-inline-block text-left site-menu float-right">
+          <li class="active"><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#packages">Packages</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+
+        <a href="#" class="burger ml-auto float-right site-menu-toggle js-menu-toggle d-inline-block d-lg-none light" data-toggle="collapse" data-target="#main-navbar">
+          <span></span>
+        </a>
+
+      </div>
+    </div>
+  </nav>
+
+  <!-- hero section starts here  -->
+
+  <div class="hero" id="home">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-7">
+          <div class="intro-wrap">
+            <h1 class="mb-5"><span class="d-block">Let's Enjoy Your</span> Trip In <span class="typed-words"></span></h1>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="slides">
+            <img src=" {% static 'images/kashmir1.jpeg' %} " alt="Beauty Kashmir" class="img-fluid active" loading=”eager”>
+            <img src=" {% static 'images/ladakh.jpeg' %} " alt="Ladakh's Beauty" class="img-fluid" loading=”eager”>
+            <img src=" {% static 'images/1.jpeg' %} " alt="Kashmit at its best" class="img-fluid" loading=”eager”>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- hero section ends here  -->
+
+  <!-- services starts here  -->
+
+  <div class="adoration-holiday-section" id="services">
+    <div class="container">
+      <div class="row mb-5 justify-content-center">
+        <div class="col-lg-6 text-center">
+          <h2 class="section-title text-center mb-3" data-aos="fade-up" data-aos-delay="250">Our Services</h2>
+          <p data-aos="fade-up" data-aos-delay="350">The services we provide doesn't have any match in India.</p>
+        </div>
+      </div>
+      <div class="row align-items-stretch">
+        <div class="col-lg-4 order-lg-1" data-aos="fade-right" data-aos-delay="300">
+          <div class="h-100">
+            <div class="frame h-100">
+              <div class="feature-img-bg h-100" style="background-image: url({% static 'images/kashmir1.jpeg' %});"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-sm-6 col-lg-4 feature-1-wrap d-md-flex flex-md-column order-lg-1">
+
+          <div class="feature-1 d-md-flex" data-aos="fade-down" data-aos-delay="150">
+            <div class="align-self-center">
+              <span class="flaticon-house display-4 text-primary"></span>
+              <h3>Beautiful Condo</h3>
+              <p class="mb-0">Stay at the best hotels, huts, resorts with us </p>
+            </div>
+          </div>
+
+          <div class="feature-1 d-md-flex" data-aos="fade-up" data-aos-delay="200">
+            <div class="align-self-center">
+              <span class="flaticon-restaurant display-4 text-primary"></span>
+              <h3>Restaurants & Cafe</h3>
+              <p class="mb-0">Eat the best food, try cuisine's with us.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-6 col-sm-6 col-lg-4 feature-1-wrap d-md-flex flex-md-column order-lg-3">
+
+          <div class="feature-1 d-md-flex" data-aos="fade-left" data-aos-delay="250">
+            <div class="align-self-center">
+              <span class="flaticon-mail display-4 text-primary"></span>
+              <h3>Easy to Connect</h3>
+              <p class="mb-0">We are just a phone call away.</p>
+            </div>
+          </div>
+
+          <div class="feature-1 d-md-flex" data-aos="fade-right" data-aos-delay="300">
+            <div class="align-self-center">
+              <span class="flaticon-phone-call display-4 text-primary"></span>
+              <h3>24/7 Support</h3>
+              <p class="mb-0">We are available anytime, anywhere</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- services ends here -->
+
+  <!-- Carousel section starts here 	 -->
+
+  <div class="adoration-holiday-section">
+    <div class="container">
+      <div class="row text-center justify-content-center mb-5">
+        <div class="col-lg-7">
+          <h2 class="section-title text-center">Popular Destination</h2>
+        </div>
+      </div>
+
+      <div class="owl-carousel owl-3-slider">
+
+        <div class="item carousel-items">
+          <a class="media-thumb" href="#contact">
+            <div class="media-text">
+              <h3>Kashmir</h3>
+              <span class="location">Kashmir</span>
+            </div>
+            <img src=" {% static 'images/kashmir1.jpeg' %} " alt="Image" class="img-fluid" loading=”eager”>
+          </a>
+        </div>
+
+        <div class="item carousel-items">
+          <a class="media-thumb" href="#contact">
+            <div class="media-text">
+              <h3>Gulmarg</h3>
+              <span class="location">Kashmir</span>
+            </div>
+            <img src=" {% static 'images/1.jpeg' %} " alt="Kashmir" class="img-fluid" loading=”eager”>
+          </a>
+        </div>
+
+
+        <div class="item carousel-items">
+          <a class="media-thumb" href="#contact">
+            <div class="media-text">
+              <h3>Leh</h3>
+              <span class="location">Ladakh</span>
+            </div>
+            <img src=" {% static 'images/ladakh.jpeg' %} " alt="Image" class="img-fluid" loading=”eager”>
+          </a>
+        </div>
+
+
+        <div class="item carousel-items">
+          <a class="media-thumb" href="#contact">
+            <div class="media-text">
+              <h3>Kargil</h3>
+              <span class="location">Ladakh</span>
+            </div>
+            <img src=" {% static 'images/1.jpeg' %} " alt="Kargil" class="img-fluid" loading=”eager”>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Carousel section ends here  -->
+
+  <!-- tesitmonial section starts here  -->
+
+  <div class="adoration-holiday-section testimonial-section mt-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-7 text-center">
+          <h2 class="section-title text-center mb-5">Testimonials</h2>
+
+          <div class="owl-single owl-carousel no-nav">
+
+            {% for test in tests %}
+            
+            <div class="testimonial mx-auto">
+              <figure class="img-wrap">
+                <img src=" {{test.image.url}} " alt="Image" class="img-fluid" loading=”eager”>
+              </figure>
+              <h3 class="name">{{test.name}}</h3>
+              <blockquote>
+                <p>&ldquo;{{test.description}}&rdquo;</p>
+              </blockquote>
+            </div>
+            
+            {% endfor %}
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- testimonial section ends here  -->
+
+  <!-- special offers and discount  starts here-->
+
+  <div class="adoration-holiday-section" id="packages">
+    <div class="container">
+      <div class="row justify-content-center text-center mb-5">
+        <div class="col-lg-6">
+          <h2 class="section-title text-center mb-3">Special Offers &amp; Discounts</h2>
+          <p data-aos="fade-up" data-aos-delay="200">The best offers and discounts currently on board.</p>
+        </div>
+      </div>
+      <div class="row justify-content-center align-items-center">
+        <div class="col-11 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0 p-4 rounded-20" data-aos="fade-up" data-aos-delay="200">
+          <a href="#contact">
+            <div class="media-1">
+            <img src=" {% static 'images/kashmir1.jpeg' %} " alt="Image" class="img-fluid">
+            <span class="d-flex align-items-center loc mb-2 my-3">
+              <span class="icon-room mr-3"></span>
+              <span>India</span>
+            </span>
+            <div class="d-flex align-items-center">
+              <div>
+                <h3>Kashmir</h3>
+                <div class="price ml-auto">
+                  <span>₹5200.00</span>
+                </div>
+              </div>
+
+            </div>
+
+        </div>
+        </a>
+      </div>
+      <div class="col-11 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0 p-4 rounded-20" data-aos="fade-up" data-aos-delay="300">
+        <a href="#contact">
+          <div class="media-1">
+            <img src=" {% static 'images/1.jpeg' %} " alt="Image" class="img-fluid">
+            <span class="d-flex align-items-center loc mb-2 my-3">
+              <span class="icon-room mr-3"></span>
+              <span>India</span>
+            </span>
+            <div class="d-flex align-items-center">
+              <div>
+                <h3>Gulmarg, Kashmir</h3>
+                <div class="price ml-auto">
+                  <span>₹52000.00</span>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </a>
+      </div>
+
+      <div class="col-11 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0 p-4 rounded-20" data-aos="fade-up" data-aos-delay="400">
+        <a href="#contact">
+          <div class="media-1">
+            <img src="{% static 'images/ladakh.jpeg' %}" alt="Image" class="img-fluid">
+            <span class="d-flex align-items-center loc mb-2 my-3">
+              <span class="icon-room mr-3"></span>
+              <span>India</span>
+            </span>
+            <div class="d-flex align-items-center">
+              <div>
+                <h3>Ladakh</h3>
+                <div class="price ml-auto">
+                  <span>₹75000.00</span>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </a>
+      </div>
+
+      <div class="col-11 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0 p-4 rounded-20" data-aos="fade-up" data-aos-delay="500">
+        <a href="#contact" <div class="media-1">
+          <img src="{% static 'images/1.jpeg' %}" alt="Image" class="img-fluid">
+          <span class="d-flex align-items-center loc mb-2 my-3">
+            <span class="icon-room mr-3"></span>
+            <span>India</span>
+          </span>
+
+          <div class="d-flex align-items-center">
+            <div>
+              <h3>Leh</h3>
+              <div class="price ml-auto">
+                <span>₹5200.00</span>
+              </div>
+            </div>
+
+          </div>
+
+        </a>
+      </div>
+
+    </div>
+  </div>
+  </div>
+  </div>
+
+  <!-- special offers and discount end here  -->
+
+  <!-- tour video starts here  -->
+
+
+
+  <!-- tour video ends here  -->
+
+  <!-- contact us starts here  -->
+
+
+  <div id="contact">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mx-auto text-center">
+          <div class="intro-wrap">
+            <h1 class="mb-3 section-title text-center">Contact Us</h1>
+            <p class="text-muted" data-aos="fade-up" data-aos-delay="500">we are always available for you, Just give it a shot you won't regret. </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="adoration-holiday-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 mb-5 mb-lg-0">
+          <form class="contact-form" data-aos="fade-up" data-aos-delay="200" method="POST">
+            {% csrf_token %}
+            <div class="row">
+              <div class="col-6">
+                <div class="form-group">
+                  <label class="text-black" for="fname">First name</label>
+                  <input type="text" class="form-control" name="f_name" id="fname" required>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="form-group">
+                  <label class="text-black" for="lname">Last name</label>
+                  <input type="text" class="form-control" name="l_name" id="lname">
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="text-black" for="email">Email address</label>
+              <input type="email" class="form-control" name="email" id="email" required>
+            </div>
+
+            <div class="form-group">
+              <label class="text-black" for="phone">Phone Number</label>
+              <input type="phone" class="form-control" name="phone" id="phone">
+            </div>
+
+            <div class="form-group">
+              <label class="text-black" for="message">Message</label>
+              <textarea name="message" class="form-control" id="message" cols="30" rows="5" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+        <div class="col-lg-5 ml-auto">
+          <div class="quick-contact-item d-flex align-items-center mb-4">
+            <span class="flaticon-house mr-1"></span>
+            <address class="text">
+              New Colony Palpora, Noorbagh, Srinagar
+            </address>
+          </div>
+          <div class="quick-contact-item d-flex align-items-center mb-4">
+            <span class="flaticon-phone-call mr-1"></span>
+            <address class="text">
+              +91-7780951047
+            </address>
+          </div>
+          <div class="quick-contact-item d-flex align-items-center mb-4">
+            <span class="flaticon-mail mr-1"></span>
+            <address class="text">
+              info@adorationholidays.com
+            </address>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- contact us ends here  	 -->
+
+
+
+  <!-- footer starts here  -->
+
+  <div class="py-5 cta-section">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-12">
+          <h2 class="mb-2 text-white" data-aos="fade-up" data-aos-delay="500">Lets you Explore the Best. Contact Us Now</h2>
+          <p class="mb-4 lead text-white text-white-opacity h4" data-aos="fade-up" data-aos-delay="750">We are at your service 24/7</p>
+          <p class="mb-0"><a href="#contact" class="btn btn-outline-white text-white btn-md font-weight-bold">Contact us</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="site-footer">
+    <div class="inner first">
+      <div class="container">
+        <div class="row justify-content-around">
+          <div class="col-12 col-lg-4 col-md-6 text-center">
+            <a href="#home"><img src="{% static '/images/logo.png' %}" alt="Logo" class="circle logo"></a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="widget">
+              <h3 class="heading">About Tour</h3>
+              <p>We are the best travel agency in Kashmir, We are a team of enthusiasts.</p>
+            </div>
+            <div class="widget">
+              <ul class="list-unstyled social">
+                <!-- <li><a href="#"><span class="icon-twitter"></span></a></li> -->
+                <li><a href="https://www.instagram.com/adorationholidays/"><span class="icon-instagram"></span></a></li>
+                <li><a href="https://www.facebook.com/Adorationholidayz-103649985821252/"><span class="icon-facebook"></span></a></li>
+                <li><a href="mailto:info@theadorationholidays.com"><span class="icon-google"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="widget">
+              <h3 class="heading">Contact</h3>
+              <ul class="list-unstyled quick-info links">
+                <li class="email"><a href="mailto:info@adorationholidays.com">info@adorationholidays.com</a></li>
+                <li class="phone"><a href="tel:+916006349884">+91-6006349884</a></li>
+                <li class="phone"><a href="tel:+917780951047">+91-7780951047</a></li>
+                <li class="address"><a href="https://www.google.com/maps/place/Adoration+Holidays/@34.1118849,74.7596625,17z/data=!3m1!4b1!4m5!3m4!1s0x38e19b9c5379d311:0xef6ea6e19358f82d!8m2!3d34.1118805!4d74.7618565">New Colony Palpora, Noorbagh, Srinagar</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="inner dark">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-md-8 mb-3 mb-md-0 mx-auto">
+            <p>Copyright &copy;<script>
+                2022
+              </script>. All Rights Reserved. &mdash; Designed with love by <a href="https://instagram.com/aalim_aslam" class="link-highlight">Aalim aslam</a>
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="widget-whatsapp">
+    <a href="https://wa.link/0bg17b"><i class="h1 icon-whatsapp"></i></a>
+  </div>
+
+  <div id="overlayer"></div>
+  <div class="loader">
+    <div class="spinner-border" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+
+  <script
+  src="https://code.jquery.com/jquery-3.6.1.min.js"
+  integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+  crossorigin="anonymous"></script>
+  <!-- <script src="js/popper.min.js"></script> -->
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'js/jquery.animateNumber.min.js' %}"></script>
+  <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+  <script src="{% static 'js/jquery.fancybox.min.js' %}"></script>
+  <script src="{% static 'js/aos.js' %}"></script>
+  <!-- <script src="js/moment.min.js"></script> -->
+  <!-- <script src="js/daterangepicker.js"></script> -->
+
+  <script src="{% static 'js/typed.js' %}"></script>
+  <script>
+    $(function() {
+      var slides = $('.slides'),
+        images = slides.find('img');
+
+      images.each(function(i) {
+        $(this).attr('data-id', i + 1);
+      })
+
+      var typed = new Typed('.typed-words', {
+        strings: ["Kashmir.", "Ladakh.", " Himachal Pradesh.", " Kargil.", " Leh."],
+        typeSpeed: 80,
+        backSpeed: 20,
+        backDelay: 4000,
+        startDelay: 1000,
+        loop: true,
+        showCursor: true,
+        preStringTyped: (arrayPos, self) => {
+          arrayPos++;
+          $('.slides img').removeClass('active');
+          $('.slides img[data-id="' + arrayPos + '"]').addClass('active');
+        }
+
+      });
+    })
+
+    $('.carousel').owlCarousel({
+      loop: true,
+      margin: 10,
+      responsiveClass: true,
+      responsive: {
+        0: {
+          items: 1,
+          nav: true
+        },
+        600: {
+          items: 3,
+          nav: false
+        },
+        1000: {
+          items: 5,
+          nav: true,
+          loop: false
+        }
+      }
+    })
+  </script>
+
+  <script src="{% static 'js/custom.js' %}"></script>
+
+</body>
+
+</html>
