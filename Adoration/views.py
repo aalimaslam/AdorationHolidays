@@ -84,7 +84,7 @@ def SiteMap(request):
 # error pages
 def handler404(request,exception):
     errorCode = exception.__class__.__name__
-    return render(request,'errors/404page.html',{"err-code":errorCode})
+    return render(request,'errors/404.html',{"err-code":errorCode})
 
 def handler500(request):
     return render(request,'errors/500page.html')    
