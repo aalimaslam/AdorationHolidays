@@ -52,7 +52,7 @@ def Main(request):
     return render(request,'index.html',extras)
 
 
-def packageDetails(request, package):
+def packageDetails(request, pk):
     if request.method == 'POST':
             name = request.POST['name']
             email = request.POST['email']
@@ -71,7 +71,7 @@ def packageDetails(request, package):
             customer.recieved_email = True
             customer.save()
             return render(request,'index.html',{'message':'Message Sent Successfully'})
-    package = Package.objects.get(name=package)
+    package = Package.objects.get(pk=pk)
     extras = {"package":package}
     print(package.inclusions.all())
     return render(request,'product.html', extras)
