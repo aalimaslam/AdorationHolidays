@@ -365,7 +365,7 @@
               <label class="control-label" for="offer-selected">Offer You Chose</label>
               <div>
                 <select name="package" class="form-control" id="offer-selected" required>
-                  
+                  <option value="Select Option" disabled selected>Select Option</option>
                   {% for package in packages %}
                   <option value="{{package.name}} {{package.time}}">{{package.name}} {{package.time}}</option>
                   {% endfor %}
