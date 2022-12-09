@@ -11,7 +11,6 @@ class Testimonial(models.Model):
     image = models.ImageField(upload_to='images/')
     description = models.TextField(max_length=500)
     created_at = models.DateTimeField(auto_now_add=True)
-    
     def __str__(self):
         return self.name
 
@@ -34,7 +33,6 @@ class Customer(models.Model):
     package = models.CharField(max_length=100)
     recieved_email = models.BooleanField(default=False)
     Resolved = models.BooleanField(default=False)
-
     def __str__(self):
         return self.name
     
@@ -51,7 +49,6 @@ class Package(models.Model):
     inclusions = models.ManyToManyField('inclusion', related_name='inclusions')
     def __str__(self):
         return self.name
-
     def get_absolute_url(self):
         return reverse('package_detail', args = [str(self.id)])
 
