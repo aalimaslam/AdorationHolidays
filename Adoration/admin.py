@@ -6,7 +6,7 @@ from django.contrib import admin
 from django.contrib.auth.models import Group
 # import user
 from django.contrib.auth.models import User
-from Adoration.models import Testimonial, Contact, Customer
+from Adoration.models import Testimonial, Contact, Customer, Package, PackageDetails, inclusion
 # Register your models here.
 
 admin.site.unregister(Group)
@@ -14,6 +14,9 @@ admin.site.unregister(User)
 admin.site.register(Testimonial)
 admin.site.register(Contact)
 admin.site.register(Customer)
+admin.site.register(Package)
+admin.site.register(PackageDetails)
+admin.site.register(inclusion)
 
 
 # change the admin site title
