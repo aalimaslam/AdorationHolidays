@@ -53,7 +53,7 @@
         <div class="row g-0">
           <div class="col-md-4">
             <img
-              src="https://images.unsplash.com/photo-1587502536575-6dfba0a6e017?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"
+              src={{package.image.url}}
               class="img-fluid rounded mx-2"
               alt="..." width="350em"
             />
@@ -61,17 +61,14 @@
           <div class="col-md-2"></div>
           <div class="col-md-6">
             <div class="card-body">
-              <h5 class="card-title fw-bold fs-3 text-success">Title</h5>
-              <p class="fw-bold">4N 5D</p>
+              <h5 class="card-title fw-bold fs-3 text-success">{{package.name}}</h5>
+              <p class="fw-bold">{{package.time}}</p>
               <p class="card-text">
                   <ul>
                     <span class="fw-bold">INCLUSION</span>
-                    <li>Item 1</li>
-                    <li>Item 2</li>
-                    <li>Item 3</li>
-                    <li>Item 4</li>
-                    <li>Item 5</li>
-                    <li>Item 6</li>
+                    {% for inclusion in package.inclusions.all %}
+                    <li>{{inclusion}}</li>
+                    {% endfor %}
                 </ul> 
                 <span class="fw-bold">₹40,000 (Per Person)</span>
               </p>
@@ -84,130 +81,39 @@
       <div class="accordion mt-5" id="accordionPanelsStayOpenExample">
 
 
+        {% for day in package.day_descriptions.all %}
+        
         <!-- individual accordian starts here  -->
 
         <div class="accordion-item border-0 my-3">
-          <h2 class="accordion-header" id="panelsStayOpen-headingOne">
-            <button
-              class="accordion-button fw-bold fs-4 text-light rounded"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#panelsStayOpen-collapseOne"
-              aria-expanded="true"
-              aria-controls="panelsStayOpen-collapseOne"
+            <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+              <button
+                class="accordion-button fw-bold fs-4 text-light rounded"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseTwo"
+                aria-expanded="true"
+                aria-controls="panelsStayOpen-collapseTwo"
+              >
+                {{day.title}}
+              </button>
+            </h2>
+            <div
+              id="panelsStayOpen-collapseTwo"
+              class="accordion-collapse collapse show"
+              aria-labelledby="panelsStayOpen-headingTwo"
             >
-              DAY 1 - HELLO THERE
-            </button>
-          </h2>
-          <div
-            id="panelsStayOpen-collapseOne"
-            class="accordion-collapse collapse show"
-            aria-labelledby="panelsStayOpen-headingOne"
-          >
-            <div class="accordion-body">
-              <p>What is Lorem Ipsum?</p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Distinctio facilis totam temporibus excepturi obcaecati
-                repellendus ipsum accusamus commodi molestias, minima
-                blanditiis! Commodi, fuga. Qui itaque vero reiciendis beatae
-                commodi quia. Ut optio, iure fuga fugiat in quae dolores fugit,
-                numquam consectetur, eius exercitationem! Consequatur iusto,
-                ducimus ad dolorem sit corporis placeat rerum! Quo veritatis
-                ipsam voluptas odio provident mollitia at? Voluptatibus culpa
-                sunt minima exercitationem, quam, id error illum fugit
-                aspernatur commodi quia dolores temporibus consequatur,
-                architecto nam possimus vitae odio ex sit similique laborum
-                facere voluptatem soluta! Molestias, iure.
-              </p>
+              <div class="accordion-body">
+                <p>
+                  {{day.description}}
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-
-        <!-- individual accordian ends here  -->
-
-        <!-- individual accordian starts here  -->
-
-        <div class="accordion-item border-0 my-3">
-          <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-            <button
-              class="accordion-button fw-bold fs-4 text-light rounded"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#panelsStayOpen-collapseTwo"
-              aria-expanded="true"
-              aria-controls="panelsStayOpen-collapseTwo"
-            >
-              DAY 2 - HELLO THERE
-            </button>
-          </h2>
-          <div
-            id="panelsStayOpen-collapseTwo"
-            class="accordion-collapse collapse show"
-            aria-labelledby="panelsStayOpen-headingTwo"
-          >
-            <div class="accordion-body">
-              <p>What is Lorem Ipsum?</p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Distinctio facilis totam temporibus excepturi obcaecati
-                repellendus ipsum accusamus commodi molestias, minima
-                blanditiis! Commodi, fuga. Qui itaque vero reiciendis beatae
-                commodi quia. Ut optio, iure fuga fugiat in quae dolores fugit,
-                numquam consectetur, eius exercitationem! Consequatur iusto,
-                ducimus ad dolorem sit corporis placeat rerum! Quo veritatis
-                ipsam voluptas odio provident mollitia at? Voluptatibus culpa
-                sunt minima exercitationem, quam, id error illum fugit
-                aspernatur commodi quia dolores temporibus consequatur,
-                architecto nam possimus vitae odio ex sit similique laborum
-                facere voluptatem soluta! Molestias, iure.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- individual accordian ends here  -->
-
-        <!-- individual accordian starts here  -->
-
-        <div class="accordion-item border-0 my-3">
-          <h2 class="accordion-header" id="panelsStayOpen-headingThree">
-            <button
-              class="accordion-button fw-bold fs-4 text-light rounded"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#panelsStayOpen-collapseThree"
-              aria-expanded="true"
-              aria-controls="panelsStayOpen-collapseThree"
-            >
-              DAY 3 - HELLO THERE
-            </button>
-          </h2>
-          <div
-            id="panelsStayOpen-collapseThree"
-            class="accordion-collapse collapse show"
-            aria-labelledby="panelsStayOpen-headingThree"
-          >
-            <div class="accordion-body">
-              <p>What is Lorem Ipsum?</p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Distinctio facilis totam temporibus excepturi obcaecati
-                repellendus ipsum accusamus commodi molestias, minima
-                blanditiis! Commodi, fuga. Qui itaque vero reiciendis beatae
-                commodi quia. Ut optio, iure fuga fugiat in quae dolores fugit,
-                numquam consectetur, eius exercitationem! Consequatur iusto,
-                ducimus ad dolorem sit corporis placeat rerum! Quo veritatis
-                ipsam voluptas odio provident mollitia at? Voluptatibus culpa
-                sunt minima exercitationem, quam, id error illum fugit
-                aspernatur commodi quia dolores temporibus consequatur,
-                architecto nam possimus vitae odio ex sit similique laborum
-                facere voluptatem soluta! Molestias, iure.
-              </p>
-            </div>
-          </div>
-
-        <!-- individual accordian ends here  -->
+  
+          <!-- individual accordian ends here  -->
+        {% endfor %}
+        
         
         </div>
       </div>
@@ -216,7 +122,7 @@
 
 <!-- form modal starts here  -->
     
-  <div id="ModalLoginForm" class="modal fade">
+<div id="ModalLoginForm" class="modal fade">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -224,7 +130,9 @@
         </div>
         <div class="modal-body">
           <form role="form" method="POST" action="">
+            {% csrf_token %}
             <input type="hidden" name="_token" value="">
+            <input type="hidden" name="type" value="Quote">  {# this line is for backend Code  #}
             <div class="form-group">
               <label class="control-label" for="name">Name</label>
               <div>
@@ -240,13 +148,13 @@
             <div class="form-group">
               <label class="control-label" for="num">Phone</label>
               <div>
-                <input type="tel" class="form-control input-lg" name="num" placeholder="+91 8888888888" pattern="[0-9]{10}" required id="num">
+                <input type="tel" class="form-control input-lg" name="phone" placeholder="+91 8888888888" pattern="[0-9]{10}" required id="num">
               </div>
             </div>
             <div class="form-group">
               <label class="control-label" for="offer-selected">Offer You Chose</label>
               <div>
-                <select name="offer-selected" class="form-control" id="offer-selected" required>
+                <select name="package" class="form-control" id="offer-selected" required>
                   <option value="Select Option" disabled selected>Select Option</option>
                   <option value="Marvelous Kashmir (5N/6D)">Marvelous Kashmir (5N/6D)</option>
                   <option value="Trip to Paradise (6N/7D)">Trip to Paradise (6N/7D)</option>
