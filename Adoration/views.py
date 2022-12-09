@@ -77,6 +77,9 @@ def packageDetails(request, pk):
     return render(request,'product.html', extras)
 
 
+def SiteMap(request):
+    return render(request, 'sitemap.html')
+
 # error pages
 def handler404(request,exception):
     errorCode = exception.__class__.__name__
