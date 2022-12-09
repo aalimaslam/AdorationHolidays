@@ -3,5 +3,5 @@ from Adoration import views
 urlpatterns = [
     path('',views.Main,name = 'Main'),
     
-    path('<str:package>/',views.packageDetails,name = 'PackageDetails')
+    path('packages/<int:pk>/',views.packageDetails,name = 'PackageDetails')
 ]
