@@ -71,8 +71,9 @@ def packageDetails(request, pk):
             customer.recieved_email = True
             customer.save()
             return render(request,'index.html',{'message':'Message Sent Successfully'})
+    packages = Package.objects.all()
     package = Package.objects.get(pk=pk)
-    extras = {"package":package}
+    extras = {"package":package,"packages":packages}
     print(package.inclusions.all())
     return render(request,'product.html', extras)
 
