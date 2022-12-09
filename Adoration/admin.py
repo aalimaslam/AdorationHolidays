@@ -10,7 +10,6 @@ from Adoration.models import Testimonial, Contact, Customer, Package, PackageDet
 # Register your models here.
 
 admin.site.unregister(Group)
-admin.site.unregister(User)
 admin.site.register(Testimonial)
 admin.site.register(Contact)
 admin.site.register(Customer)
