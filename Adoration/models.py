@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.urls import reverse
 # Create your models here.
 
 
@@ -49,9 +49,11 @@ class Package(models.Model):
     image = models.ImageField(upload_to='images/')
     day_descriptions = models.ManyToManyField('PackageDetails', related_name='day_descriptions')
     inclusions = models.ManyToManyField('inclusion', related_name='inclusions')
-    
     def __str__(self):
         return self.name
+
+    def get_absolute_url(self):
+        return reverse('package_detail', args = [str(self.id)])
 
 class PackageDetails(models.Model):
     title = models.CharField(max_length=100)
