@@ -78,7 +78,7 @@ def packageDetails(request, pk):
 
 
 def SiteMap(request):
-    return render(request, 'sitemap.html')
+    return render(request, 'sitemap.xml')
 
 # error pages
 def handler404(request,exception):
