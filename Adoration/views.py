@@ -45,11 +45,36 @@ def Main(request):
             contact.recieved_email = True
             contact.save()
             return render(request,'index.html',{'message':'Message Sent Successfully'})
-
+    packages = Package.objects.all()
     tests = Testimonial.objects.all()
-    extras = {"tests":tests}
+    extras = {"tests":tests, "packages":packages}
+    print()
     return render(request,'index.html',extras)
 
+
+def packageDetails(request, package):
+    if request.method == 'POST':
+            name = request.POST['name']
+            email = request.POST['email']
+            phone = request.POST['phone']
+            package = request.POST['package']
+            Message_to_send = f'Hello {name},\n\nThank you for contacting us. We will get back to you as soon as possible. Be sure you provided the proper information.\n\nName: {name}\nPhone: {phone}\nEmail: {email}\n\nRegards,\nAdoration Team'
+            customer = Customer(name=name,email=email,phone=phone,package=package)
+            customer.save()
+            send_mail(
+                "Adoration Holidays",
+                Message_to_send, #Message to send
+                'info@adorationholidays.com',# from email
+                [email,], # to email
+                fail_silently=False,
+            )
+            customer.recieved_email = True
+            customer.save()
+            return render(request,'index.html',{'message':'Message Sent Successfully'})
+    package = Package.objects.get(name=package)
+    extras = {"package":package}
+    print(package.inclusions.all())
+    return render(request,'product.html', extras)
 
 
 # error pages
