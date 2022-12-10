@@ -3,6 +3,7 @@ from .models import Package
   
 class PackageSitemap(Sitemap):
     changefreq = "weekly"
+    location = "/"
     priority = 0.8
     
     def items(self):
