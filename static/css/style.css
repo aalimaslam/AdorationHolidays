@@ -8,6 +8,11 @@ a,a:hover{color:#2f4c2d}#overlayer,body:before{top:0;position:fixed;left:0}#map 
 .color-primary{
     color:#fff !important;
 }
+@media screen and (max-width:1000px){
+    .color-primary{
+        color:#2f42cd !important;
+    }
+}
 @media screen and (max-width: 768px) {
     .nav-top{padding:20px 0 !important; color:#2f4c2d;}
     .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl{
