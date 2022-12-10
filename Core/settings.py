@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-ob*m2l!p_mnb5*5-xv83sjp=9=l3y=arwk4%rxefjgw(l#hkq)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['adorationholidays.com', 'www.adorationholidays.com','https://adoration.com','https://www.adoration.com','http://adoration.com','http://www.adoration.com']
 CSRF_ALLOWED_ORIGINS = ALLOWED_HOSTS
