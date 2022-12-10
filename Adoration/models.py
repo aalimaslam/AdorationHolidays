@@ -46,11 +46,12 @@ class Package(models.Model):
     time = models.CharField(max_length=100, default='1 Day')
     image = models.ImageField(upload_to='images/')
     day_descriptions = models.ManyToManyField('PackageDetails', related_name='day_descriptions')
+    lastedit_date = models.DateTimeField(default=None, blank=True, null=True)
     inclusions = models.ManyToManyField('inclusion', related_name='inclusions')
     def __str__(self):
         return self.name
     def get_absolute_url(self):
-        return reverse('package_detail', args = [str(self.id)])
+        return "/p/%i/" % self.pk
 
 class PackageDetails(models.Model):
     title = models.CharField(max_length=100)
