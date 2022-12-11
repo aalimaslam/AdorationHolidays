@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-ob*m2l!p_mnb5*5-xv83sjp=9=l3y=arwk4%rxefjgw(l#hkq)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['adorationholidays.com', 'www.adorationholidays.com','https://adoration.com','https://www.adoration.com','http://adoration.com','http://www.adoration.com']
+ALLOWED_HOSTS = ['adorationholidays.com', 'www.adorationholidays.com']
 CSRF_ALLOWED_ORIGINS = ALLOWED_HOSTS
 
 SECURE_SSL_REDIRECT = True
