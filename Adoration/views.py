@@ -20,7 +20,7 @@ def Main(request):
             send_mail(
                 "Adoration Holidays",
                 Message_to_send, #Message to send
-                'xtzy8at5tmzd@adorationholidays.com',# from email
+                'info@adorationholidays.com',# from email
                 [email,], # to email
                 fail_silently=False,
             )
@@ -38,7 +38,7 @@ def Main(request):
             send_mail(
                 "Adoration Holidays",
                 Message_to_send, #Message to send
-                'xtzy8at5tmzd@adorationholidays.com',# from email
+                'info@adorationholidays.com',# from email
                 [email,], # to email
                 fail_silently=False,
             )
@@ -64,7 +64,7 @@ def packageDetails(request, pk):
             send_mail(
                 "Adoration Holidays",
                 Message_to_send, #Message to send
-                'xtzy8at5tmzd@adorationholidays.com',# from email
+                'info@adorationholidays.com',# from email
                 [email,], # to email
                 fail_silently=False,
             )
