@@ -145,7 +145,8 @@ MEDIA_DIR = BASE_DIR / 'media'
 MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = '/media/'
 
-EMAIL_BACKEND = 'django_smtp_ssl.SSLEmailBackend'
+# EMAIL_BACKEND = 'django_smtp_ssl.SSLEmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtpout.secureserver.net'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'info@adorationholidays.com'
