@@ -150,7 +150,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtpout.secureserver.net'
 EMAIL_PORT = 80
 EMAIL_HOST_USER = 'info@adorationholidays.com'
-EMAIL_HOST_PASSWORD = 'EmailPassWordOfAdoration.com'
+EMAIL_HOST_PASSWORD = 'EmailPassWordhOfAdoration.com'
 EMAIL_USE_TLS = True 
 EMAIL_USE_SSL = False
 
