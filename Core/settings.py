@@ -151,7 +151,7 @@ EMAIL_HOST = 'smtpout.secureserver.net'
 EMAIL_PORT = 80
 EMAIL_HOST_USER = 'info@adorationholidays.com'
 EMAIL_HOST_PASSWORD = 'EmailPassWordOfAdoration.com'
-EMAIL_USE_TLS = True 
+EMAIL_USE_TLS = False 
 EMAIL_USE_SSL = True
 
 
