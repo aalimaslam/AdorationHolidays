@@ -13,7 +13,7 @@ def Main(request):
             name = request.POST['name']
             email = request.POST['email']
             phone = request.POST['phone']
-            package = request.POST['package']
+            package = request.POST.get('package')
             Message_to_send = f'Hello {name},\n\nThank you for contacting us. We will get back to you as soon as possible. Be sure you provided the proper information.\n\nName: {name}\nPhone: {phone}\nEmail: {email}\n\nRegards,\nAdoration Team'
             customer = Customer(name=name,email=email,phone=phone,package=package)
             customer.save()
@@ -57,7 +57,7 @@ def packageDetails(request, pk):
             name = request.POST['name']
             email = request.POST['email']
             phone = request.POST['phone']
-            package = request.POST['package']
+            package = request.POST.get('package')
             Message_to_send = f'Hello {name},\n\nThank you for contacting us. We will get back to you as soon as possible. Be sure you provided the proper information.\n\nName: {name}\nPhone: {phone}\nEmail: {email}\n\nRegards,\nAdoration Team'
             customer = Customer(name=name,email=email,phone=phone,package=package)
             customer.save()
