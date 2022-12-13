@@ -35,7 +35,9 @@ a,a:hover{color:#2f4c2d}#overlayer,body:before{top:0;position:fixed;left:0}#map 
         margin-right: 0 !important;
     }
 }
-
+#ModalLoginForm{
+    z-index:9999999999999;
+}
 .sidebar{
     position: fixed;
     left:0;
