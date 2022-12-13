@@ -414,16 +414,16 @@
             {% csrf_token %}
             <input type="hidden" name="type" value="contact">  {# this line is for backend Code  #}
             <div class="row">
-            <div class="form-group">
+            <div class="form-group col-12">
                <label class="text-black" for="name">Name</label>
                <input type="text" class="form-control" id="name" name="name" required>
             </div>
-            <div class="form-group">
+            <div class="form-group col-12">
               <label for="text-black" for="number">Phone Number</label>
               <input type="tel" name="phone" id="number" class="form-control" required>
             </div>
 
-            <div class="form-group">
+            <div class="form-group col-12">
               <label class="text-black" for="message">Message</label>
               <textarea name="message" class="form-control" id="message" cols="30" rows="5"></textarea>
             </div>
