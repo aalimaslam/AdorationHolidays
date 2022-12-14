@@ -4,10 +4,10 @@ from django.core.mail import send_mail
 # Create your views here.
 
 
-
-
-
 def Main(request):
+    packages = Package.objects.all()
+    tests = Testimonial.objects.all()
+    extras = {"tests":tests, "packages":packages}
     if request.method == 'POST':
         if request.POST.get('type') == 'Quote':
             name = request.POST['name']
@@ -26,7 +26,7 @@ def Main(request):
             )
             customer.recieved_email = True
             customer.save()
-            return render(request,'index.html',{'message':'Message Sent Successfully'})
+            return render(request,'index.html',extras)
         elif request.POST.get('type') == 'contact':
             name = request.POST['name']
             email = request.POST['email']
@@ -44,15 +44,15 @@ def Main(request):
             )
             contact.recieved_email = True
             contact.save()
-            return render(request,'index.html',{'message':'Message Sent Successfully'})
-    packages = Package.objects.all()
-    tests = Testimonial.objects.all()
-    extras = {"tests":tests, "packages":packages}
+            return render(request,'index.html',extras)
     print()
     return render(request,'index.html',extras)
 
 
 def packageDetails(request, pk):
+    packages = Package.objects.all()
+    package = Package.objects.get(pk=pk)
+    extras = {"package":package,"packages":packages}
     if request.method == 'POST':
             name = request.POST['name']
             email = request.POST['email']
@@ -70,10 +70,7 @@ def packageDetails(request, pk):
             )
             customer.recieved_email = True
             customer.save()
-            return render(request,'index.html',{'message':'Message Sent Successfully'})
-    packages = Package.objects.all()
-    package = Package.objects.get(pk=pk)
-    extras = {"package":package,"packages":packages}
+            return render(request,'index.html',extras)
     print(package.inclusions.all())
     return render(request,'product.html', extras)
 
