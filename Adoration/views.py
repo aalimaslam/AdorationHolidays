@@ -31,7 +31,7 @@ def Main(request):
             name = request.POST.get('name','-------')
             email = request.POST.get('email','-------')
             phone = request.POST.get('phone','-------')
-            package = request.POST.get('package','--------')
+            message = request.POST.get('message','--------')
             Message_to_send = f'Hello {name},\n\nThank you for contacting us. We will get back to you as soon as possible. Be sure you provided the proper information.\n\nName: {name}\nPhone: {phone}\nEmail: {email}\n\nRegards,\nAdoration Team'
             contact = Contact(name=name,email=email,message=message,phone=phone)
             contact.save()
