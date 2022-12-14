@@ -10,10 +10,10 @@ def Main(request):
     extras = {"tests":tests, "packages":packages}
     if request.method == 'POST':
         if request.POST.get('type') == 'Quote':
-            name = request.POST['name']
-            email = request.POST['email']
-            phone = request.POST['phone']
-            package = request.POST.get('package','-----')
+            name = request.POST.get('name','-------')
+            email = request.POST.get('email','-------')
+            phone = request.POST.get('phone','-------')
+            package = request.POST.get('package','--------')
             Message_to_send = f'Hello {name},\n\nThank you for contacting us. We will get back to you as soon as possible. Be sure you provided the proper information.\n\nName: {name}\nPhone: {phone}\nEmail: {email}\n\nRegards,\nAdoration Team'
             customer = Customer(name=name,email=email,phone=phone,package=package)
             customer.save()
@@ -28,10 +28,10 @@ def Main(request):
             customer.save()
             return render(request,'index.html',extras)
         elif request.POST.get('type') == 'contact':
-            name = request.POST['name']
-            email = request.POST['email']
-            phone = request.POST['phone']
-            message = request.POST['message']
+            name = request.POST.get('name','-------')
+            email = request.POST.get('email','-------')
+            phone = request.POST.get('phone','-------')
+            package = request.POST.get('package','--------')
             Message_to_send = f'Hello {name},\n\nThank you for contacting us. We will get back to you as soon as possible. Be sure you provided the proper information.\n\nName: {name}\nPhone: {phone}\nEmail: {email}\n\nRegards,\nAdoration Team'
             contact = Contact(name=name,email=email,message=message,phone=phone)
             contact.save()
@@ -54,10 +54,10 @@ def packageDetails(request, pk):
     package = Package.objects.get(pk=pk)
     extras = {"package":package,"packages":packages}
     if request.method == 'POST':
-            name = request.POST['name']
-            email = request.POST['email']
-            phone = request.POST['phone']
-            package = request.POST.get('package')
+            name = request.POST.get('name','-------')
+            email = request.POST.get('email','-------')
+            phone = request.POST.get('phone','-------')
+            package = request.POST.get('package','--------')
             Message_to_send = f'Hello {name},\n\nThank you for contacting us. We will get back to you as soon as possible. Be sure you provided the proper information.\n\nName: {name}\nPhone: {phone}\nEmail: {email}\n\nRegards,\nAdoration Team'
             customer = Customer(name=name,email=email,phone=phone,package=package)
             customer.save()
