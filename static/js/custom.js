@@ -220,4 +220,21 @@ $(function(){
 
 	}
 	owlPlugin();
+	
+	//close navbar on click of a navigation link
+	
+var burger = ".site-mobile-menu-close .js-menu-toggle",
+menu = ".site-mobile-menu-body",
+menuLink = menu + " a",
+icon = ".site-menu-toggle";
+
+
+$(menuLink).on("click", function (e) {
+	console.log("click")
+	$(burger).removeClass("active");
+	$(menu).removeClass('active');
+	$("body").removeClass('offcanvas-menu');
+	$(icon).removeClass('active');
+  });
+
 })
