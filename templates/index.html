@@ -270,16 +270,20 @@ deserts are the best places in ladakh and it is a bikers dream land</p>
           <h2 class="section-title text-center mb-5">Testimonials</h2>
 
           <div class="owl-single owl-carousel no-nav">
+            {% for test in tests %}
+            
+            
             <div class="testimonial mx-auto">
               <figure class="img-wrap">
-                <img src="{% static 'images/person_1.webp' %}" alt="Image" class="img-fluid" loading=”eager”>
+                <img src="{{test.image.url}}" alt="Image" class="img-fluid" loading=”eager”>
               </figure>
-              <h3 class="name">Aalim aslam</h3>
+              <h3 class="name">{{test.name}}</h3>
               <blockquote>
-                <p>&ldquo;The Best ever Service Provider in India I would say.&rdquo;</p>
+                <p>&ldquo;{{test.description}}&rdquo;</p>
               </blockquote>
             </div>
-
+          {% endfor %}
+            
             <div class="testimonial mx-auto">
               <figure class="img-wrap">
                 <img src="{% static 'images/person_3.webp' %}" alt="Image" class="img-fluid" loading=”eager”>
