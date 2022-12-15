@@ -42,6 +42,7 @@ class Customer(models.Model):
 
 class Package(models.Model):
     name = models.CharField(max_length=100)
+    tagline = models.CharField(max_length=100, default='')
     price = models.CharField(max_length=100)
     time = models.CharField(max_length=100, default='1 Day')
     image = models.ImageField(upload_to='images/')
