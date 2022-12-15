@@ -59,3 +59,7 @@ a,a:hover{color:#2f4c2d}#overlayer,body:before{top:0;position:fixed;left:0}#map 
         opacity:.5;
     }
 }
+.media-text{
+    left:40% !important;
+    text-align:center;
+}
