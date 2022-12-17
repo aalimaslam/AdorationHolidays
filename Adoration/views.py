@@ -21,7 +21,7 @@ def Main(request):
                 "Adoration Holidays",
                 Message_to_send, #Message to send
                 'info@adorationholidays.com',# from email
-                [email,], # to email
+                [email,'adorationholidays@gmail.com'], # to email
                 fail_silently=False,
             )
             customer.recieved_email = True
@@ -39,7 +39,7 @@ def Main(request):
                 "Adoration Holidays",
                 Message_to_send, #Message to send
                 'info@adorationholidays.com',# from email
-                [email,'info@adorationholidays.com'], # to email
+                [email,'info@adorationholidays.com','adorationholidays@gmail.com'], # to email
                 fail_silently=False,
             )
             contact.recieved_email = True
@@ -65,7 +65,7 @@ def packageDetails(request, pk):
                 "Adoration Holidays",
                 Message_to_send, #Message to send
                 'info@adorationholidays.com',# from email
-                [email,], # to email
+                [email,'adorationholidays@gmail.com'], # to email
                 fail_silently=False,
             )
             customer.recieved_email = True
