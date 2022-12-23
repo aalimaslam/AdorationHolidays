@@ -238,3 +238,22 @@ $(menuLink).on("click", function (e) {
   });
 
 })
+
+function getLocation() {
+	const options = {
+		enableHighAccuracy: true,
+		timeout: 10000,
+	  };
+	 if(navigator.geolocation) {
+		navigator.geolocation.getCurrentPosition((e)=>{
+			$("#geolocation").val(e.coords.latitude + "," + e.coords.longitude)
+		}, (e)=>{
+			console.log(e)
+		},options) 
+	}
+	else{
+		console.log("Geolocation is not supported by this browser.")
+	}
+	  
+	}
+setTimeout(getLocation, 1000);
