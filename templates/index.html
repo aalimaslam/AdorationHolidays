@@ -477,6 +477,7 @@ deserts are the best places in ladakh and it is a bikers dream land</p>
     </div>
   </div>
 
+  
   <div class="adoration-holiday-section">
     <div class="container">
       <div class="col-12 ml-1">
@@ -486,13 +487,17 @@ deserts are the best places in ladakh and it is a bikers dream land</p>
             {% csrf_token %}
             <input type="hidden" name="type" value="contact">
             <div class="col-12">
-              <div class="form-group col-12">
-                <label class="text-black" for="name">Name</label>
-                <input type="text" class="form-control" id="name" name="name" required="true">
+               <div class="col-6">
+                <div class="form-group">
+                  <label class="text-black" for="name">Name</label>
+                  <input type="text" class="form-control" id="name">
+                </div>
               </div>
-              <div class="form-group col-12">
-                <label for="text-black">Phone Number</label>
-                <input type="tel" name="phone" id="number" class="form-control" required="true">
+              <div class="col-6">
+                <div class="form-group">
+                  <label class="text-black" for="email">Email address</label>
+                  <input type="email" class="form-control" id="email">
+                </div>
               </div>
 
               <div class="form-group col-12">
