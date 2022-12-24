@@ -18,6 +18,7 @@ class Contact(models.Model):
     name = models.CharField(max_length=100)
     email = models.EmailField(max_length=100)
     message = models.TextField(max_length=500)
+    location = models.CharField(max_length=500 , default = '-------')
     phone = models.CharField(max_length=100)
     recieved_email = models.BooleanField(default=False)
     Resolved = models.BooleanField(default=False)

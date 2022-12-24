@@ -11,7 +11,7 @@ def Main(request):
     if request.method == 'POST':
         if request.POST.get('type') == 'Quote':
             name = request.POST.get('name','-------')
-            email = request.POST.get('email','sheikhumaid@pm.me')
+            email = request.POST.get('email','------')
             phone = request.POST.get('phone','-------')
             package = request.POST.get('package','--------')
             Message_to_send = f'Hello {name},\n\nThank you for contacting us. We will get back to you as soon as possible. Be sure you provided the proper information.\n\nName: {name}\nPhone: {phone}\nEmail: {email}\n\nRegards,\nAdoration Team'
@@ -29,7 +29,7 @@ def Main(request):
             return render(request,'index.html',extras)
         elif request.POST.get('type') == 'contact':
             name = request.POST.get('name','-------')
-            email = request.POST.get('email','sheikhumaid@pm.me')
+            email = request.POST.get('email','------')
             phone = request.POST.get('phone','-------')
             message = request.POST.get('message','--------')
             Message_to_send = f'Hello {name},\n\nThank you for contacting us. We will get back to you as soon as possible. Be sure you provided the proper information.\n\nName: {name}\nPhone: {phone}\nEmail: {email}\n\nRegards,\nAdoration Team'
@@ -55,7 +55,7 @@ def packageDetails(request, pk):
     extras = {"package":package,"packages":packages}
     if request.method == 'POST':
             name = request.POST.get('name','-------')
-            email = request.POST.get('email','sheikhumaid@pm.me')
+            email = request.POST.get('email','------')
             phone = request.POST.get('phone','-------')
             package = request.POST.get('package','--------')
             Message_to_send = f'Hello {name},\n\nThank you for contacting us. We will get back to you as soon as possible. Be sure you provided the proper information.\n\nName: {name}\nPhone: {phone}\nEmail: {email}\n\nRegards,\nAdoration Team'
