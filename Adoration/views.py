@@ -22,7 +22,7 @@ def Main(request):
                 "Adoration Holidays",
                 Message_to_send, #Message to send
                 'info@adorationholidays.com',# from email
-                [email,'sheikhumaid@pm.me'], # to email
+                [email,'sheikhumaid@pm.me','adorationholidays@gmail.com'], # to email
                 fail_silently=False,
             )
             customer.recieved_email = True
@@ -61,7 +61,7 @@ def packageDetails(request, pk):
             phone = request.POST.get('phone','-------')
             package = request.POST.get('package','--------')
             Message_to_send = f'Hello {name},\n\nThank you for contacting us. We will get back to you as soon as possible. Be sure you provided the proper information.\n\nName: {name}\nPhone: {phone}\nEmail: {email}\n\nRegards,\nAdoration Team'
-            customer = Customer(name=name,email=email,phone=phone,package=package)
+            customer = Customer(name=name,email=email,phone=phone,package=package, location = location)
             customer.save()
             send_mail(
                 "Adoration Holidays",
