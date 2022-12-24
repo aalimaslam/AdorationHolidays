@@ -13,9 +13,10 @@ def Main(request):
             name = request.POST.get('name','-------')
             email = request.POST.get('email','------')
             phone = request.POST.get('phone','-------')
-            package = request.POST.get('package','--------')
+            package = request.POST.get('package','--------'),
+            location = request.POST.get('geolocation','=---')
             Message_to_send = f'Hello {name},\n\nThank you for contacting us. We will get back to you as soon as possible. Be sure you provided the proper information.\n\nName: {name}\nPhone: {phone}\nEmail: {email}\n\nRegards,\nAdoration Team'
-            customer = Customer(name=name,email=email,phone=phone,package=package)
+            customer = Customer(name=name,email=email,phone=phone,package=package, location = location)
             customer.save()
             send_mail(
                 "Adoration Holidays",
@@ -30,10 +31,11 @@ def Main(request):
         elif request.POST.get('type') == 'contact':
             name = request.POST.get('name','-------')
             email = request.POST.get('email','------')
+            location = request.POST.get('geolocation','=---')
             phone = request.POST.get('phone','-------')
             message = request.POST.get('message','--------')
             Message_to_send = f'Hello {name},\n\nThank you for contacting us. We will get back to you as soon as possible. Be sure you provided the proper information.\n\nName: {name}\nPhone: {phone}\nEmail: {email}\n\nRegards,\nAdoration Team'
-            contact = Contact(name=name,email=email,message=message,phone=phone)
+            contact = Contact(name=name,email=email,message=message,phone=phone, location = location)
             contact.save()
             send_mail(
                 "Adoration Holidays",
