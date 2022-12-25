@@ -28,7 +28,8 @@ DEBUG = False
 ALLOWED_HOSTS = ['adorationholidays.com', 'www.adorationholidays.com', 'https://adorationholidays.com','http://adorationholidays.com']
 CSRF_ALLOWED_ORIGINS = ALLOWED_HOSTS
 
-SECURE_SSL_REDIRECT = True
+SECURE_SSL_REDIRECT = False
+
 
 # Application definition
 
