@@ -11,17 +11,18 @@ def Main(request):
     if request.method == 'POST':
         if request.POST.get('type') == 'Quote':
             name = request.POST.get('name','-------')
-            email = request.POST.get('email','sheikhumaid@pm.me')
+            email = request.POST.get('email','------')
             phone = request.POST.get('phone','-------')
-            package = request.POST.get('package','--------')
+            package = request.POST.get('package','--------'),
+            location = request.POST.get('geolocation','=---')
             Message_to_send = f'Hello {name},\n\nThank you for contacting us. We will get back to you as soon as possible. Be sure you provided the proper information.\n\nName: {name}\nPhone: {phone}\nEmail: {email}\n\nRegards,\nAdoration Team'
-            customer = Customer(name=name,email=email,phone=phone,package=package)
+            customer = Customer(name=name,email=email,phone=phone,package=package, location = location)
             customer.save()
             send_mail(
                 "Adoration Holidays",
                 Message_to_send, #Message to send
                 'info@adorationholidays.com',# from email
-                [email,'adorationholidays@gmail.com'], # to email
+                [email,'sheikhumaid@pm.me','adorationholidays@gmail.com'], # to email
                 fail_silently=False,
             )
             customer.recieved_email = True
@@ -29,11 +30,12 @@ def Main(request):
             return render(request,'index.html',extras)
         elif request.POST.get('type') == 'contact':
             name = request.POST.get('name','-------')
-            email = request.POST.get('email','sheikhumaid@pm.me')
+            email = request.POST.get('email','------')
+            location = request.POST.get('geolocation','=---')
             phone = request.POST.get('phone','-------')
             message = request.POST.get('message','--------')
             Message_to_send = f'Hello {name},\n\nThank you for contacting us. We will get back to you as soon as possible. Be sure you provided the proper information.\n\nName: {name}\nPhone: {phone}\nEmail: {email}\n\nRegards,\nAdoration Team'
-            contact = Contact(name=name,email=email,message=message,phone=phone)
+            contact = Contact(name=name,email=email,message=message,phone=phone, location = location)
             contact.save()
             send_mail(
                 "Adoration Holidays",
@@ -55,11 +57,11 @@ def packageDetails(request, pk):
     extras = {"package":package,"packages":packages}
     if request.method == 'POST':
             name = request.POST.get('name','-------')
-            email = request.POST.get('email','sheikhumaid@pm.me')
+            email = request.POST.get('email','------')
             phone = request.POST.get('phone','-------')
             package = request.POST.get('package','--------')
             Message_to_send = f'Hello {name},\n\nThank you for contacting us. We will get back to you as soon as possible. Be sure you provided the proper information.\n\nName: {name}\nPhone: {phone}\nEmail: {email}\n\nRegards,\nAdoration Team'
-            customer = Customer(name=name,email=email,phone=phone,package=package)
+            customer = Customer(name=name,email=email,phone=phone,package=package, location = location)
             customer.save()
             send_mail(
                 "Adoration Holidays",
