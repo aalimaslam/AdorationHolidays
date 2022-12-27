@@ -22,8 +22,8 @@ def Main(request):
                 "Adoration Holidays",
                 Message_to_send, #Message to send
                 'info@adorationholidays.com',# from email
-                # [email,'sheikhumaid@pm.me','adorationholidays@gmail.com'], # to email Poduction
-                [email], # to email
+                [email,'sheikhumaid@pm.me','adorationholidays@gmail.com'], # to email Poduction
+                # [email], # to email
                 fail_silently=False,
             )
             customer.recieved_email = True
