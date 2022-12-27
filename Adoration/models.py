@@ -32,6 +32,7 @@ class Customer(models.Model):
     email = models.EmailField(max_length=100)
     phone = models.CharField(max_length=100)
     package = models.CharField(max_length=100)
+    location = models.CharField(max_length=500 , default = '-------')
     recieved_email = models.BooleanField(default=False)
     Resolved = models.BooleanField(default=False)
     def __str__(self):
