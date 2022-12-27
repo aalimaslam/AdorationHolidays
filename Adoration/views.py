@@ -59,6 +59,7 @@ def packageDetails(request, pk):
     if request.method == 'POST':
             name = request.POST.get('name','-------')
             email = request.POST.get('email','------')
+            location = request.POST.get('geolocation','=---')
             phone = request.POST.get('phone','-------')
             package = request.POST.get('package','--------')
             Message_to_send = f'Hello {name},\n\nThank you for contacting us. We will get back to you as soon as possible. Be sure you provided the proper information.\n\nName: {name}\nPhone: {phone}\nEmail: {email}\n\nRegards,\nAdoration Team'
